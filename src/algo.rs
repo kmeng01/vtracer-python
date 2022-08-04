@@ -1,16 +1,7 @@
 use image::{ImageBuffer, Rgba, RgbaImage};
 use std::vec::Vec;
 use visioncortex::ColorImage;
-use vtracer::{convert_image_to_svg, convert_image_to_svg_in_mem, Config, Preset};
-
-pub fn vtrace_fpath(input_fpath: &str, output_fpath: &str) -> Result<(), String> {
-    let args = Config::from_preset(Preset::Bw, &input_fpath, &output_fpath);
-    println!(
-        "Running vtracer for input file {} -> output at {}",
-        &input_fpath, &output_fpath
-    );
-    convert_image_to_svg(args)
-}
+use vtracer::{convert_image_to_svg_in_mem, Config, Preset};
 
 pub fn vtrace_image_array(img_ar: Vec<Vec<Vec<u8>>>) -> Result<String, String> {
     let img = array_to_image(img_ar);
