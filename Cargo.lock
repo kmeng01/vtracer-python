@@ -875,7 +875,7 @@ dependencies = [
 [[package]]
 name = "vtracer"
 version = "0.4.0"
-source = "git+https://github.com/kmeng01/vtracer#ca1a131156ba28e6f4560036e1dd53de8f5d86f1"
+source = "git+https://github.com/kmeng01/vtracer#5a8fd9cd89ca143689dbad6485b765483cc05bff"
 dependencies = [
  "clap",
  "image 0.23.14",
